@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+@include('html/_head.html',{
+pageTitle:'Main page'
+})
+
+<body class="page__body">
+  <div class="site-container">
+    <!-- @include('html/_header.html') -->
+    <main class="main">
+      <div class="container">
+        @include('html/home/_hero.html')
+        @include('html/home/_services.html')
+        @include('html/home/_portfolio.html')
+        @include('html/home/_stages.html')
+        @include('html/home/_team.html')
+        @include('html/home/_stages-adv.html')
+        @include('html/home/_reviews.html')
+        @include('html/home/_faq.html')
+      </div>
+
+    </main>
+
+    <!-- @include('html/footer.html') -->
+    <!-- @include('html/h1.html') пример include -->
+  </div>
+</body>
+
+</html>

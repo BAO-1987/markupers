@@ -1,0 +1,47 @@
+.reviews {
+  position: relative;
+}
+
+.reviews-slider {
+  overflow: hidden;
+
+  &__list {
+    margin-bottom: rem(50);
+  }
+
+
+  &__item {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__blockquote {
+    padding-top: 60px;
+    position: relative;
+    width: 100%;
+    max-width: 928px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      mask-image: url("../img/sprite.svg#quotes");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 40px;
+      height: 40px;
+      background-color: var(--color-shadow);
+    }
+  }
+
+    &__inner {
+      margin-top: 30px;
+      display: flex;
+      gap: 50px;
+    }
+
+    &__author {
+      font-weight: 700;
+    }
+  }

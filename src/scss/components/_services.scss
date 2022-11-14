@@ -1,0 +1,122 @@
+.services {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: rem(50);
+    gap: 30px;
+  }
+}
+
+.card {
+  position: relative;
+  border-radius: 15px;
+  padding: 25px 30px 25px 25px;
+  background-color: transparent;
+  transition: color 0.3s linear, background-color 0.3s linear;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    mask-image: url("../img/sprite.svg#cursor");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-ebony);
+    transition: background-color 0.3s linear;
+  }
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-ebony);
+
+    &::before {
+      background-color: var(--color-white);
+    }
+
+    .card__icon::before {
+      background-color: var(--color-white);
+    }
+  }
+
+  &__icon {
+    @include flex-center;
+
+    position: relative;
+    min-height: 104px;
+    margin-bottom: rem(20);
+
+    &::before {
+      content: "";
+      position: absolute;
+      mask-image: url("../img/sprite.svg#infinity");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 70px;
+      height: 70px;
+      background-color: var(--color-ebony);
+      transition: background-color 0.3s linear;
+    }
+
+    &--digital {
+      &::before {
+        mask-image: url("../img/sprite.svg#infinity");
+        height: 33px;
+      }
+    }
+
+    &--seo {
+      &::before {
+        mask-image: url("../img/sprite.svg#triangle");
+      }
+    }
+
+    &--smm {
+      &::before {
+        mask-image: url("../img/sprite.svg#insta");
+      }
+    }
+
+    &--advertising {
+      &::before {
+        mask-image: url("../img/sprite.svg#double-arrow");
+      }
+    }
+
+    &--landing {
+      &::before {
+        mask-image: url("../img/sprite.svg#infinity");
+      }
+    }
+
+    &--multipage {
+      &::before {
+        mask-image: url("../img/sprite.svg#infinity");
+      }
+    }
+
+  }
+
+  h3 {
+    padding-left: 90px;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: rem(30);
+  }
+
+  span:not([class]) {
+    font-weight: 900;
+    font-size: 40px;
+  }
+
+  &__content {
+    @include flex;
+  }
+}

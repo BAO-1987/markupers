@@ -1,0 +1,150 @@
+.hero {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 905px;
+  }
+
+  &__title {
+    @include h1;
+  }
+
+  .word {
+    display: inline-flex;
+  }
+}
+
+.social {
+  &__list {
+    display: block;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__link {
+    @include flex-all-center;
+
+    position: relative;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-silver);
+    transition: background-color 0.3s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      mask-image: url("../img/sprite.svg#fb");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 20px;
+      height: 20px;
+      background-color: var(--color-white);
+    }
+
+    &:hover {
+      background-color: var(--color-orange);
+    }
+
+    &--fb {
+      &::before {
+        content: "";
+        position: absolute;
+        mask-image: url("../img/sprite.svg#fb");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        width: 20px;
+        height: 20px;
+        background-color: var(--color-white);
+      }
+    }
+
+    &--ln {
+      &::before {
+        content: "";
+        position: absolute;
+        mask-image: url("../img/sprite.svg#ln");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        width: 20px;
+        height: 20px;
+        background-color: var(--color-white);
+      }
+    }
+
+    &--in {
+      &::before {
+        content: "";
+        position: absolute;
+        mask-image: url("../img/sprite.svg#insta");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        width: 20px;
+        height: 20px;
+        background-color: var(--color-white);
+      }
+    }
+
+    &--yt {
+      &::before {
+        content: "";
+        position: absolute;
+        mask-image: url("../img/sprite.svg#youtube");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        width: 20px;
+        height: 20px;
+        background-color: var(--color-white);
+      }
+    }
+
+    &--be {
+      &::before {
+        content: "";
+        position: absolute;
+        mask-image: url("../img/sprite.svg#behance");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        width: 20px;
+        height: 20px;
+        background-color: var(--color-white);
+      }
+    }
+  }
+}
+
+.lang {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-boulder);
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: var(--color-orange);
+    }
+  }
+}
