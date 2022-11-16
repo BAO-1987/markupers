@@ -33,23 +33,30 @@
       content: counter(li, decimal-leading-zero);
       position: absolute;
       font-weight: 700;
+      font-size: 100px;
       font-feature-settings: "pnum"on, "lnum"on;
       line-height: 1;
+
+      border: 1px solid var(--line-gr);
+
+
       // // color: inherit;
       // -webkit-text-stroke-width: 1px;
       // // background: inherit;
-    background: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
+      background: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
       // mask-clip: text;
- -webkit-text-fill-color: transparent;
- -webkit-background-clip: text;
-// background: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+       border-image-source: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
+
+      // background: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
 
 
       // -webkit-text-stroke-color: linear-gradient(180deg, #907f53 50.43%, #ffffff 50.43%);
       //  -webkit-text-fill-color: white;
       //  /* Will override color (regardless of order) */
       //  -webkit-text-stroke-width: 1px;
-           //  -webkit-text-stroke: 3px darkgrey;
+      //  -webkit-text-stroke: 3px darkgrey;
       //  -webkit-text-fill-color: white;
       // background-color: rgba(144, 127, 83, 1);
       // background: linear-gradient(180deg, #907f53 50.43%, #ffffff 50.43%);
@@ -61,7 +68,7 @@
       // background: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
       // border: 1px solid;
 
-      border-image-source: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
+      // border-image-source: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
 
       // background: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
 
@@ -122,6 +129,7 @@
     &--mani {
       left: 0;
       right: -55px;
+
       &::before {
         mask-image: url("../img/sprite.svg#testing");
       }

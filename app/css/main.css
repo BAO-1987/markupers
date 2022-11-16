@@ -11,6 +11,7 @@
   --color-silver: #bababa;
   --color-boulder: #7c7c7c;
   --br-r: 15px;
+  --line-gr: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
 }
 
 /*
@@ -184,6 +185,17 @@ h3::first-letter {
   outline: 2px solid var(--color-blue);
   outline-offset: 2px;
 }
+.btn--second {
+  padding: 20px 72px 20px 30px;
+  background-color: var(--color-white);
+  color: var(--color-ebony);
+  border: 1px solid var(--color-ebony);
+}
+.btn--second::before {
+  content: "";
+  right: 24px;
+  background-color: var(--color-ebony);
+}
 
 .btn-reset {
   border: none;
@@ -223,6 +235,16 @@ h3::first-letter {
   width: 16px;
   height: 16px;
   background-color: var(--color-orange);
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2.1875rem;
 }
 
 .visually-hidden {
@@ -512,6 +534,9 @@ h3::first-letter {
   position: relative;
   overflow: hidden;
 }
+.portfolio-slider__list {
+  margin-bottom: 3.125rem;
+}
 .portfolio-slider__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -523,6 +548,8 @@ h3::first-letter {
 
 .portfolio-desc {
   padding-top: 25px;
+  width: 100%;
+  max-width: 430px;
 }
 .portfolio-desc__title {
   margin-bottom: 30px;
@@ -629,25 +656,30 @@ h3::first-letter {
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 3.125rem;
+  margin-bottom: clamp(20px, 3.125rem, 50px);
   gap: 30px;
 }
 
 .card {
   position: relative;
+  border: 1px solid var(--color-ebony);
   border-radius: 15px;
-  padding: 25px 30px 25px 25px;
+  padding: 1.5625rem 1.875rem 1.5625rem 1.5625rem;
   background-color: transparent;
   -webkit-transition: color 0.3s linear, background-color 0.3s linear;
   -o-transition: color 0.3s linear, background-color 0.3s linear;
   transition: color 0.3s linear, background-color 0.3s linear;
-  cursor: pointer;
+}
+@media (max-width: calc(68.75em - 0.0625em)) {
+  .card {
+    padding: clamp(10px, 1.2rem, 20px);
+  }
 }
 .card::before {
   content: "";
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  right: 1.25rem;
+  bottom: 1.25rem;
   -webkit-mask-image: url("../img/sprite.svg#cursor");
   mask-image: url("../img/sprite.svg#cursor");
   -webkit-mask-position: center;
@@ -682,7 +714,6 @@ h3::first-letter {
   align-items: center;
   position: relative;
   min-height: 104px;
-  margin-bottom: 1.25rem;
 }
 .card__icon::before {
   content: "";
@@ -718,6 +749,8 @@ h3::first-letter {
 .card__icon--advertising::before {
   -webkit-mask-image: url("../img/sprite.svg#double-arrow");
   mask-image: url("../img/sprite.svg#double-arrow");
+  width: 55px;
+  height: 45px;
 }
 .card__icon--landing::before {
   -webkit-mask-image: url("../img/sprite.svg#infinity");
@@ -728,20 +761,32 @@ h3::first-letter {
   mask-image: url("../img/sprite.svg#infinity");
 }
 .card h3 {
-  padding-left: 90px;
   margin-bottom: 0;
+  padding-left: clamp(25px, 5.6rem, 90px);
 }
 .card p {
   margin-bottom: 1.875rem;
 }
+.card a::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+}
 .card span:not([class]) {
+  font-size: calc(25px + 15 * ((100vw - 320px) / 1600));
   font-weight: 900;
-  font-size: 40px;
 }
 .card__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.card__up {
+  margin-right: clamp(5px, 2rem, 50px);
 }
 
 .stages__list {
@@ -777,9 +822,11 @@ h3::first-letter {
   content: counter(li, decimal-leading-zero);
   position: absolute;
   font-weight: 700;
+  font-size: 100px;
   -webkit-font-feature-settings: "pnum" on, "lnum" on;
   font-feature-settings: "pnum" on, "lnum" on;
   line-height: 1;
+  border: 1px solid var(--line-gr);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50.43%, #907F53), color-stop(50.43%, #FFFFFF));
   background: -o-linear-gradient(top, #907F53 50.43%, #FFFFFF 50.43%);
   background: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);

@@ -1,25 +1,30 @@
 .services {
   &__list {
     display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: rem(50);
+    margin-bottom: clamp(20px, 3.125rem, 50px);
     gap: 30px;
   }
 }
 
 .card {
   position: relative;
+  border: 1px solid var(--color-ebony);
   border-radius: 15px;
-  padding: 25px 30px 25px 25px;
+  padding: rem(25) rem(30) rem(25) rem(25);
   background-color: transparent;
   transition: color 0.3s linear, background-color 0.3s linear;
-  cursor: pointer;
+
+  @include for-width(-desktop-s) {
+    padding: clamp(10px, 1.2rem, 20px);
+  }
 
   &::before {
     content: "";
     position: absolute;
-    right: 20px;
-    bottom: 20px;
+    right: rem(20);
+    bottom: rem(20);
     mask-image: url("../img/sprite.svg#cursor");
     mask-position: center;
     mask-repeat: no-repeat;
@@ -41,6 +46,7 @@
     .card__icon::before {
       background-color: var(--color-white);
     }
+
   }
 
   &__icon {
@@ -48,7 +54,6 @@
 
     position: relative;
     min-height: 104px;
-    margin-bottom: rem(20);
 
     &::before {
       content: "";
@@ -85,6 +90,8 @@
     &--advertising {
       &::before {
         mask-image: url("../img/sprite.svg#double-arrow");
+        width: 55px;
+        height: 45px;
       }
     }
 
@@ -99,24 +106,37 @@
         mask-image: url("../img/sprite.svg#infinity");
       }
     }
-
   }
 
   h3 {
-    padding-left: 90px;
     margin-bottom: 0;
+    padding-left: clamp(25px, 5.6rem, 90px);
   }
 
   p {
     margin-bottom: rem(30);
   }
 
+  a {
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      inset: 0;
+    }
+  }
+
   span:not([class]) {
+    @include adaptive_size("font-size", 40, 25);
+
     font-weight: 900;
-    font-size: 40px;
   }
 
   &__content {
-    @include flex;
+    @include flex-center;
+  }
+
+  &__up {
+    margin-right: clamp(5px, 2rem, 50px);
   }
 }

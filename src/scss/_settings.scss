@@ -62,7 +62,7 @@ section {
 }
 
 h3 {
-   @include h3;
+  @include h3;
 }
 
 
@@ -115,6 +115,19 @@ h3 {
   // &:active {
   //   background-color: var(--color-active);
   // }
+
+  &--second {
+    padding: 20px 72px 20px 30px;
+    background-color: var(--color-white);
+    color: var(--color-ebony);
+    border: 1px solid var(--color-ebony);
+
+    &::before {
+      content: "";
+      right: 24px;
+      background-color: var(--color-ebony);
+    }
+  }
 }
 
 .btn-reset {
@@ -152,14 +165,11 @@ h3 {
   }
 }
 
-// .content {
-//   @include flex-all-center;
+.content {
+  @include flex-center;
 
-//   @include for-width(-tablet) {
-//     flex-direction: column;
-//     gap: 25px;
-//   }
-// }
+  gap: rem(35);
+}
 
 
 .visually-hidden {

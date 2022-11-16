@@ -7,6 +7,10 @@
   position: relative;
   overflow: hidden;
 
+  &__list {
+    margin-bottom: rem(50);
+  }
+
   &__item {
     display: flex;
     justify-content: space-between;
@@ -15,6 +19,8 @@
 
 .portfolio-desc {
   padding-top: 25px;
+  width: 100%;
+  max-width: 430px;
 
   &__title {
     margin-bottom: 30px;
@@ -24,7 +30,6 @@
     letter-spacing: 0.06em;
   }
 
-  &__list {}
 
   &__item {
     display: flex;
@@ -62,9 +67,12 @@
       background-color: var(--color-ebony);
     }
 
+
+
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+
     span {
       display: inline-flex;
     }
