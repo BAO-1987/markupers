@@ -36,18 +36,31 @@
       font-size: 100px;
       font-feature-settings: "pnum"on, "lnum"on;
       line-height: 1;
+      // background: linear-gradient(180deg, #fff 50.43%, #907F53 50.43%);
+      background-color: inherit;
+      color: inherit;
 
-      border: 1px solid var(--line-gr);
+      // -webkit-text-fill-color: var(--line-gr);
+      // color: var(--color-white);
+
+      // -webkit-text-fill-color: rgba(144, 127, 83, 1);
+      -webkit-text-stroke: 1px;
+      // -webkit-text-stroke-color: rgba(144, 127, 83, 1);
+
+      // border: 1px solid var(--line-gr);
+      // -webkit-text-stroke: 1px var(--line-gr);
 
 
-      // // color: inherit;
-      // -webkit-text-stroke-width: 1px;
-      // // background: inherit;
-      background: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
-      // mask-clip: text;
-      -webkit-text-fill-color: transparent;
+      // // // color: inherit;
+      // // -webkit-text-stroke-width: 1px;
+      // // // background: inherit;
+
+      // // mask-clip: text;
+      // // 
+
+      // -webkit-text-fill-color: inherit;
       -webkit-background-clip: text;
-       border-image-source: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
+      // border-image-source: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 60.43%);
 
       // background: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
 

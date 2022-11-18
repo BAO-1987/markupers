@@ -1,0 +1,39 @@
+.footer {
+  padding: rem(150) 0;
+  color: var(--color-white);
+  background-color: var(--color-shadow);
+
+  &__inner {
+    @include flex-all-sb;
+  }
+
+  &-copyright {
+    @include flex-all-sb;
+
+    position: relative;
+    letter-spacing: 0.04em;
+    gap: rem(30);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 82px;
+      width: 1px;
+      height: 100%;
+      background-color: var(--color-white);
+    }
+
+    &__link {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-white);
+      }
+    }
+  }
+}
