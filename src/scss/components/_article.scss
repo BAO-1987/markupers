@@ -1,13 +1,20 @@
 .article {
+  display: flex;
+  flex-direction: column;
   position: relative;
   border: 1px solid transparent;
   border-radius: 15px;
   padding: rem(30);
   transition: border 0.3s linear;
   cursor: pointer;
+  overflow: hidden;
 
   &:hover {
     border: 1px solid var(--color-orange);
+
+    .article__content {
+      margin-bottom: 0;
+    }
   }
 
   &__box {
@@ -19,36 +26,50 @@
   }
 
   &__content {
-    display: flex;
-    margin-bottom: 20px;
-    align-items: center;
-    gap: 15px;
+        margin-bottom: -115px;
+        will-change: margin;
+        transition: all 0.3s linear;
+  }
+
+  &__descr {
+    @include flex-center;
+    gap: rem(15);
     font-weight: 500;
     font-size: 15px;
     line-height: 1.5;
-    letter-spacing: 0.03em;
-  }
 
-  &__position {
-    color: var(--color-silver);
-  }
 
-  &__link {
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 2;
+    a {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+      }
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    span {
+      color: var(--color-silver);
     }
   }
+
 }
 
 .social-networks {
+
   &__list {
     display: inline-flex;
+    margin-top: rem(20);
   }
 
   &__item {

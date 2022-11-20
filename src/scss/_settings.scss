@@ -178,6 +178,123 @@ h3 {
 }
 
 
+.chats {
+  @include flex-all-center;
+
+  position: fixed;
+  right: calc((100% - 1410px) / 2);
+  bottom: rem(40);
+  z-index: 20;
+  border-radius: var(--br-small);
+  padding: rem(20) rem(45);
+  width: 115px;
+  height: 65px;
+  background-color: var(--color-orange);
+  transition: border 0.3s linear;
+
+  &::before {
+    content: "";
+    position: absolute;
+    mask-image: url("../img/sprite.svg#chats");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: 20px;
+    height: 16px;
+    background-color: var(--color-white);
+    transition: background-color 0.3s linear;
+  }
+
+  // &:hover {
+  //   border: 1px solid var(--color-blue);
+
+  //   &::before {
+  //     background-color: var(--color-blue);
+  //   }
+  // }
+
+  &:active {
+    border: 1px solid var(--color-active);
+
+    &::before {
+      background-color: var(--color-active);
+    }
+  }
+
+  @include for-width(-desktop-lg) {
+    right: rem(16);
+  }
+
+  @include for-width(-tablet) {
+    width: 54px;
+    height: 34px;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__list {
+    @include flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: rem(65);
+    }
+  }
+
+  &__link {
+    @include flex-all-center;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      mask-image: url("../img/sprite.svg#viber");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 35px;
+      height: 35px;
+      background-color: var(--color-white);
+      transition: background-color 0.3s linear;
+    }
+
+    &--viber {
+      &::before {
+        mask-image: url("../img/sprite.svg#viber");
+      }
+    }
+
+    &--telegram {
+      &::before {
+        mask-image: url("../img/sprite.svg#telegram");
+      }
+    }
+
+    &--whatsapp {
+      &::before {
+        mask-image: url("../img/sprite.svg#whatsapp");
+      }
+    }
+
+    &:hover {
+      &::before {
+        background-color: var(--color-blue);
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: var(--color-active);
+      }
+    }
+  }
+}
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;

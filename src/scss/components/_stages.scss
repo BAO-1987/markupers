@@ -36,54 +36,19 @@
       font-size: 100px;
       font-feature-settings: "pnum"on, "lnum"on;
       line-height: 1;
-      // background: linear-gradient(180deg, #fff 50.43%, #907F53 50.43%);
-      background-color: inherit;
-      color: inherit;
 
-      // -webkit-text-fill-color: var(--line-gr);
-      // color: var(--color-white);
-
-      // -webkit-text-fill-color: rgba(144, 127, 83, 1);
-      -webkit-text-stroke: 1px;
-      // -webkit-text-stroke-color: rgba(144, 127, 83, 1);
-
-      // border: 1px solid var(--line-gr);
-      // -webkit-text-stroke: 1px var(--line-gr);
-
-
-      // // // color: inherit;
-      // // -webkit-text-stroke-width: 1px;
-      // // // background: inherit;
-
-      // // mask-clip: text;
-      // // 
-
-      // -webkit-text-fill-color: inherit;
+      background: linear-gradient(180deg, #fff 50.43%, #907F53 50.43%);
+      -webkit-text-stroke: 1px transparent;
       -webkit-background-clip: text;
-      // border-image-source: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 60.43%);
+      color: transparent;
 
-      // background: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
+    }
 
-
-      // -webkit-text-stroke-color: linear-gradient(180deg, #907f53 50.43%, #ffffff 50.43%);
-      //  -webkit-text-fill-color: white;
-      //  /* Will override color (regardless of order) */
-      //  -webkit-text-stroke-width: 1px;
-      //  -webkit-text-stroke: 3px darkgrey;
-      //  -webkit-text-fill-color: white;
-      // background-color: rgba(144, 127, 83, 1);
-      // background: linear-gradient(180deg, #907f53 50.43%, #ffffff 50.43%);
-      // -webkit-background-clip: text;
-      // -webkit-text-stroke: 1px transparent;
-      // // color: white;
-
-      // // text-stroke: 1px var(--color-white);
-      // background: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
-      // border: 1px solid;
-
-      // border-image-source: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
-
-      // background: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
+    &::after {
+      content: '';
+      position: absolute;
+      background: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
+      inset: 0;
 
     }
 
@@ -95,6 +60,7 @@
       }
     }
   }
+
 
   &__icon {
     @include flex-all-center;
