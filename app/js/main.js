@@ -157,9 +157,6 @@ const portfolioSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"
   slidesPerView: 1,
   mousewheelControl: true,
   keyboardControl: true,
-  // autoplay: {
-  //   delay: 2000,
-  // },
   a11y: {
     prevSlideMessage: 'Next',
     nextSlideMessage: 'Prev'

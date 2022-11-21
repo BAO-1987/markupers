@@ -136,6 +136,80 @@ h3 {
   }
 }
 
+.slider-btn {
+  @include flex-all-center;
+
+  position: absolute;
+  right: 0;
+  top: 57px;
+  width: 35px;
+  height: 35px;
+  transition: background-color 0.3s linear;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    mask-image: url("../img/sprite.svg#arrow-right");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-ebony);
+
+    @include for-width(-mobile-l) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &--reverse {
+    right: rem(80);
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      mask-image: url("../img/sprite.svg#arrow-left");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 35px;
+      height: 35px;
+      background-color: var(--color-ebony);
+
+      @include for-width(-mobile-l) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    @include for-width(-mobile-l) {
+      right: 30px;
+    }
+  }
+
+  &:hover::before {
+    background-color: var(--color-orange);
+  }
+
+  @include for-width(-mobile-l) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.slider-btn.swiper-button-disabled {
+  pointer-events: none;
+
+  &::before {
+    background-color: var(--color-silver);
+  }
+}
+
 .btn-reset {
   border: none;
   padding: 0;

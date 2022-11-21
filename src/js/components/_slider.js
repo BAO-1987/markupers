@@ -8,10 +8,6 @@ const portfolioSlider = new Swiper(".portfolio-slider", {
   slidesPerView: 1,
   mousewheelControl: true,
   keyboardControl: true,
-  // autoplay: {
-  //   delay: 2000,
-  // },
-
 
   a11y: {
     prevSlideMessage: 'Next',

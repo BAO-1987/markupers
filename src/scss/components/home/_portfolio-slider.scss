@@ -2,7 +2,6 @@
   position: relative;
 }
 
-
 .portfolio-slider {
   position: relative;
   overflow: hidden;
@@ -30,51 +29,60 @@
     letter-spacing: 0.06em;
   }
 
+  &__list {
+    margin-bottom: 30px;
 
-  &__item {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    font-weight: 700;
-    line-height: 1.65;
-    padding-left: 15px;
+    li {
+      @include flex-all-sb;
+      position: relative;
+      font-weight: 700;
+      line-height: 1.65;
+      padding-left: 20px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 10px;
-      left: 0;
-      mask-image: url("../img/sprite.svg#ellipse");
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: cover;
-      width: 10px;
-      height: 10px;
-      background-color: var(--color-ebony);
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: var(--color-ebony);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 40%;
+        mask-image: url("../img/sprite.svg#line");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        width: 30%;
+        height: 10px;
+        background-color: var(--color-ebony);
+      }
+
+      &:nth-child(n+1)::after {
+        width: 46%;
+      }
+
+      &:nth-child(n+2)::after {
+        width: 50%;
+      }
     }
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 10px;
-      left: 0;
-      mask-image: url("../img/sprite.svg#line");
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: cover;
-      width: 80%;
-      height: 10px;
-      background-color: var(--color-ebony);
-    }
-
-
-
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
-
-    span {
-      display: inline-flex;
-    }
+  &__category {
+    display: block;
+    margin-bottom: rem(50);
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-silver);
   }
 }
