@@ -243,6 +243,21 @@ h3 {
     height: 16px;
     background-color: var(--color-orange);
   }
+
+  &--second {
+    &::before {
+      content: "";
+      position: absolute;
+      left: -34px;
+      mask-image: url("../img/sprite.svg#pdf");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 16px;
+      height: 20px;
+      background-color: var(--color-orange);
+    }
+  }
 }
 
 .content {

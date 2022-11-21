@@ -344,6 +344,22 @@ h3::first-letter {
   height: 16px;
   background-color: var(--color-orange);
 }
+.link--second::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  -webkit-mask-image: url("../img/sprite.svg#pdf");
+  mask-image: url("../img/sprite.svg#pdf");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  width: 16px;
+  height: 20px;
+  background-color: var(--color-orange);
+}
 
 .content {
   display: -webkit-box;
@@ -824,6 +840,9 @@ h3::first-letter {
   position: relative;
   overflow: hidden;
 }
+.portfolio-slider__box {
+  margin-right: 10px;
+}
 .portfolio-slider__list {
   margin-bottom: 3.125rem;
 }
@@ -831,13 +850,15 @@ h3::first-letter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .portfolio-desc {
-  padding-top: 25px;
   width: 100%;
   max-width: 430px;
 }
@@ -1123,12 +1144,10 @@ h3::first-letter {
   -webkit-font-feature-settings: "pnum" on, "lnum" on;
   font-feature-settings: "pnum" on, "lnum" on;
   line-height: 1;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50.43%, #907F53), color-stop(50.43%, #FFFFFF));
-  background-image: -o-linear-gradient(top, #907F53 50.43%, #FFFFFF 50.43%);
-  background-image: linear-gradient(180deg, #907F53 50.43%, #FFFFFF 50.43%);
-  -webkit-text-stroke: 1px transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(0, 173, 75);
   -webkit-background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 .stages__item--adv {
   padding: 70px 78px 50px;

@@ -6,18 +6,20 @@
   position: relative;
   overflow: hidden;
 
+  &__box {
+    margin-right: 10px;
+  }
+
   &__list {
     margin-bottom: rem(50);
   }
 
   &__item {
-    display: flex;
-    justify-content: space-between;
+    @include flex-all-sb;
   }
 }
 
 .portfolio-desc {
-  padding-top: 25px;
   width: 100%;
   max-width: 430px;
 
