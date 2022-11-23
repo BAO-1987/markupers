@@ -73,7 +73,6 @@ h3 {
 }
 
 .btn {
-
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -105,17 +104,17 @@ h3 {
   }
 
   &:focus {
-    outline: 2px solid var(--color-blue);
+    outline: 2px solid var(--color-active);
     outline-offset: 2px;
   }
 
-  // &:hover {
-  //   border: 1px solid var(--color-white);
-  // }
+  &:hover {
+    background-color: var(--color-orange-100);
+  }
 
-  // &:active {
-  //   background-color: var(--color-active);
-  // }
+  &:active {
+    background-color: var(--color-active);
+  }
 
   &--second {
     padding: 20px 72px 20px 30px;
@@ -216,7 +215,6 @@ h3 {
   background: transparent;
 }
 
-
 .text {
   @include adaptive_size("font-size", 18, 14);
 
@@ -247,15 +245,21 @@ h3 {
   &--second {
     &::before {
       content: "";
-      position: absolute;
       left: -34px;
       mask-image: url("../img/sprite.svg#pdf");
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: cover;
       width: 16px;
       height: 20px;
-      background-color: var(--color-orange);
+    }
+  }
+
+  &--arrow {
+    &::before {
+      content: "";
+      position: absolute;
+      right: 54px;
+      mask-image: url("../img/sprite.svg#arrow-long");
+      width: 30px;
+      height: 10px;
     }
   }
 }

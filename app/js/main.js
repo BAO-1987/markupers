@@ -217,6 +217,38 @@ const reviewsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](
   // },
 
 });
+const blogSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".blog-slider", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  mousewheelControl: true,
+  keyboardControl: true,
+  a11y: {
+    prevSlideMessage: 'Next',
+    nextSlideMessage: 'Prev'
+  } // navigation: {
+  //   nextEl: ".portfolio__next",
+  //   prevEl: ".portfolio__prev",
+  // },
+  // breakpoints: {
+  //   430: {
+  //     slidesPerView: 2,
+  //     spaceBetween: 10,
+  //   },
+  //   580: {
+  //     slidesPerView: 2,
+  //     spaceBetween: 10,
+  //   },
+  //   750: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 10,
+  //   },
+  //   992: {
+  //     slidesPerView: 4,
+  //     spaceBetween: 20,
+  //   },
+  // }
+
+});
 
 /***/ }),
 
