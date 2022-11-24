@@ -2,19 +2,23 @@
 
   <div class="form__box">
     <input class="form__input" type="text" id="name">
-    <label class="form__label" for="name">Ваше ім'я</label>
+    <label class="form__label" for="name">Name</label>
   </div>
 
   <div class="form__box">
     <input class="form__input" type="tel" id="phone">
-    <label class="form__label" for="phone">Ваш телефон</label>
+    <label class="form__label" for="phone">Phone</label>
   </div>
 
-  <label class="form__check custom-checkbox" for="consent_checkbox">
-    <input class="custom-checkbox__field" name="check" id="consent_checkbox" type="checkbox">
-    <span class="custom-checkbox__content">Натискаючи кнопку я погоджуюся з правилами конфіденційності</span>
-  </label>
+  <div class="form__box">
+   <textarea class="form__message"  cols="10" rows="10" id="message"></textarea>
+    <label class="form__label form__label--message" for="message">Message</label>
+  </div>
 
-   <button class="btn btn--cursor" type="submit">Замовити консультацію</button>
+  <span class="form__necessarily">– necessarily</span>
+
+  <span class="form__text">By clicking the button, I consent to the processing of my personal data</span>
+
+  <button class="btn btn--cursor" type="submit">Request a quote</button>
 
 </form>

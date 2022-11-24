@@ -1,0 +1,27 @@
+.contacts {
+  @include flex;
+
+  color: var(--color-white);
+
+  &__title {
+    margin-bottom: rem(25);
+  }
+
+  &__inner {
+    border-radius: 0 15px 15px 0;
+    padding: rem(100);
+    background-color: var(--color-shadow);
+  }
+}
+
+.contact {
+  border-radius: 15px 0 0 15px;
+  padding: rem(100);
+  background-color: var(--color-ebony);
+}
+
+.info {
+  &__list {
+    
+  }
+}
