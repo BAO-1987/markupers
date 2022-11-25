@@ -7,14 +7,9 @@
   padding: rem(30);
   transition: border 0.3s linear;
   cursor: pointer;
-  overflow: hidden;
 
   &:hover {
     border: 1px solid var(--color-orange);
-
-    .article__content {
-      margin-bottom: 0;
-    }
   }
 
   &__box {
@@ -25,19 +20,13 @@
     border-radius: 15px;
   }
 
-  &__content {
-        margin-bottom: -115px;
-        will-change: margin;
-        transition: all 0.3s linear;
-  }
-
   &__descr {
     @include flex-center;
-    gap: rem(15);
+
     font-weight: 500;
     font-size: 15px;
     line-height: 1.5;
-
+    gap: rem(15);
 
     a {
       &::before {
@@ -62,14 +51,13 @@
       color: var(--color-silver);
     }
   }
-
 }
 
 .social-networks {
 
   &__list {
+    padding-top: 20px;
     display: inline-flex;
-    margin-top: rem(20);
   }
 
   &__item {

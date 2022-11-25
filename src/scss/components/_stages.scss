@@ -2,10 +2,10 @@
   &__list {
     counter-reset: li;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin-bottom: rem(50);
     padding-left: rem(50);
-    grid-template-columns: repeat(3, 1fr);
-    gap: 45px;
+    gap: rem(45);
   }
 
   &__title {
@@ -41,28 +41,28 @@
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: rgb(0, 173, 75);
       -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
       // color: inherit;
 
 
       // color: inherit;
       // background: #FFFFFF;
-  //     text-shadow: 1px 1px 0#907F53,
-  //       1px -1px 0 #907F53,
-  //       -1px 1px 0 #907F53,
-  //       -1px -1px 0 #907F53,
-  //       1px 0px 0 #907F53,
-  //       0px 1px 0 #907F53,
-  //       -1px 0px 0 #907F53,
-  //       0px -1px 0 #907F53;
+      //     text-shadow: 1px 1px 0#907F53,
+      //       1px -1px 0 #907F53,
+      //       -1px 1px 0 #907F53,
+      //       -1px -1px 0 #907F53,
+      //       1px 0px 0 #907F53,
+      //       0px 1px 0 #907F53,
+      //       -1px 0px 0 #907F53,
+      //       0px -1px 0 #907F53;
 
 
-  // background: linear-gradient(180deg, #fff 50.43%, #907F53 50.43%);
-  // ;
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
-  // -webkit-text-stroke: 1px transparent;
-   }
+      // background: linear-gradient(180deg, #fff 50.43%, #907F53 50.43%);
+      // ;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
+      // -webkit-text-stroke: 1px transparent;
+    }
 
     &--adv {
       padding: 70px 78px 50px;

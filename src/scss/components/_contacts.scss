@@ -8,6 +8,7 @@
   }
 
   &__inner {
+    display: grid;
     border-radius: 0 15px 15px 0;
     padding: rem(100);
     background-color: var(--color-shadow);
@@ -28,7 +29,7 @@
 
   &__item {
     position: relative;
-   letter-spacing: 0.03em;
+    letter-spacing: 0.03em;
 
     &::before {
       content: "";
@@ -81,9 +82,30 @@
 }
 
 .follow {
+  align-self: flex-end;
+
   .social__list {
     display: flex;
     gap: 42px;
+  }
+
+  .social__item {
+    margin: 0;
+  }
+
+  .social__link {
+    background-color: var(--color-white);
+
+    &::before {
+      background-color: var(--color-boulder);
+      width: 30px;
+      height: 30px;
+      transition: background-color 0.3s linear;
+    }
+
+    &:hover::before {
+      background-color: var(--color-active);
+    }
   }
 
   .social__link {
