@@ -9,67 +9,70 @@
 
   <div class="blog-slider">
 
+    <button class="blog-slider__prev slider-btn slider-btn--reverse">
+    </button>
+
+    <button class="blog-slider__next slider-btn">
+    </button>
+
+
     <ul class="blog-slider__list swiper-wrapper">
 
-      <li class="blog-slider__item swiper-slide">
-        <span>Kompany</span>
-        <div class="blog-slider__content">
-          <time datetime="10.05.22">10.05.22</time>
-          <span>3 m</span>
-        </div>
-        <h3>We is looking for specialists</h3>
-        <a class="link link--arrow" href="#">Go to the news</a>
-      </li>
-
-      <li class="blog-slider__item swiper-slide">
-        <span>Kompany</span>
-        <div class="blog-slider__content">
-          <time datetime="10.05.22">10.05.22</time>
-          <span>3 m</span>
-        </div>
-        <h3>We is looking for specialists</h3>
-        <a class="link link--arrow" href="#">Go to the news</a>
-      </li>
-
-      <li class="blog-slider__item swiper-slide">
-        <span>Kompany</span>
-        <div class="blog-slider__content">
-          <time datetime="10.05.22">10.05.22</time>
-          <span>3 m</span>
-        </div>
-        <h3>We is looking for specialists</h3>
-        <a class="link link--arrow" href="#">Go to the news</a>
-      </li>
-
-      <li class="blog-slider__item swiper-slide">
-        <span>Kompany</span>
-        <div class="blog-slider__content">
-          <time datetime="10.05.22">10.05.22</time>
-          <span>3 m</span>
-        </div>
-        <h3>We is looking for specialists</h3>
-        <a class="link link--arrow" href="#">Go to the news</a>
-      </li>
-
-      <li class="blog-slider__item swiper-slide">
-        <span>Kompany</span>
-        <div class="blog-slider__content">
-          <time datetime="10.05.22">10.05.22</time>
-          <span>3 m</span>
-        </div>
-        <h3>We is looking for specialists</h3>
-        <a class="link link--arrow" href="#">Go to the news</a>
-      </li>
-
-      <li class="blog-slider__item swiper-slide">
-        <span>Kompany</span>
-        <div class="blog-slider__content">
-          <time datetime="10.05.22">10.05.22</time>
-          <span>3 m</span>
-        </div>
-        <h3>We is looking for specialists</h3>
-        <a class="link link--arrow" href="#">Go to the news</a>
-      </li>
+      @loop("../_blog-card.html",[{
+      class: "blog-slider__item swiper-slide",
+      slogan: "Kompany",
+      time: "10.05.22",
+      duration: "3 m",
+      title: "We is looking for specialists",
+      link: "Go to the news",
+      http: "#"
+      },
+      {
+      class: "blog-slider__item swiper-slide",
+      slogan: "Kompany",
+      time: "10.05.22",
+      duration: "3 m",
+      title: "We is looking for specialists",
+      link: "Go to the news",
+      http: "#"
+      },
+      {
+      class: "blog-slider__item swiper-slide",
+      slogan: "Kompany",
+      time: "10.05.22",
+      duration: "3 m",
+      title: "We is looking for specialists",
+      link: "Go to the news",
+      http: "#"
+      },
+      {
+      class: "blog-slider__item swiper-slide",
+      slogan: "Kompany",
+      time: "10.05.22",
+      duration: "3 m",
+      title: "We is looking for specialists",
+      link: "Go to the news",
+      http: "#"
+      },
+      {
+      class: "blog-slider__item swiper-slide",
+      slogan: "Kompany",
+      time: "10.05.22",
+      duration: "3 m",
+      title: "We is looking for specialists",
+      link: "Go to the news",
+      http: "#"
+      },
+      {
+      class: "blog-slider__item swiper-slide",
+      slogan: "Kompany",
+      time: "10.05.22",
+      duration: "3 m",
+      title: "We is looking for specialists",
+      link: "Go to the news",
+      http: "#"
+      }
+      ])
 
     </ul>
 

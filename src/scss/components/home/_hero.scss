@@ -8,12 +8,16 @@
   }
 
   &__content {
-    width: 100%;
-    max-width: 905px;
+    // width: 100%;
+    // max-width: 905px;
   }
 
   &__title {
     @include h1;
+    line-height: 1.76;
+
+    width: 100%;
+     max-width: 905px;
   }
 
   .word {
@@ -28,7 +32,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-bottom: rem(30);
+      margin-bottom: rem(27);
     }
   }
 

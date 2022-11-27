@@ -1,7 +1,8 @@
 .header {
   @include flex-all-sb;
 
-  padding: rem(40) 0;
+  margin-bottom: 10px;
+  padding: rem(36) rem(13);
 }
 
 .nav {
@@ -12,19 +13,23 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: rem(70);
+      margin-right: rem(62);
     }
+     &:nth-child(5) {
+      margin-right: rem(45);
+     }
   }
 
   &__link {
     &--dropdown {
       position: relative;
+
       &::before {
         --rotate: rotate(90deg);
 
         content: "";
         position: absolute;
-        right: -38%;
+        right: -21px;
         top: 50%;
         mask-image: url("../img/sprite.svg#small-arrow");
         mask-position: center;

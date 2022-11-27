@@ -41,13 +41,16 @@ section {
   }
 }
 
-// .main {
-//   padding-top: rem(52);
+.main {
+  // padding-top: rem(52);
 
-//   @include for-width(-tablet) {
-//     padding-top: rem(30);
-//   }
-// }
+  // @include for-width(-tablet) {
+  //   padding-top: rem(30);
+  // }
+  // &--home {
+  //    padding-top: rem(35);
+  // }
+}
 
 .title {
   @include h2;
@@ -143,15 +146,10 @@ h3 {
   position: absolute;
   right: 0;
   top: 57px;
-  width: 35px;
-  height: 35px;
-  transition: background-color 0.3s linear;
 
   &::before {
     content: "";
     position: absolute;
-    right: 0;
-    top: 0;
     mask-image: url("../img/sprite.svg#arrow-right");
     mask-position: center;
     mask-repeat: no-repeat;
@@ -172,8 +170,7 @@ h3 {
     &::before {
       content: "";
       position: absolute;
-      right: 0;
-      top: 0;
+
       mask-image: url("../img/sprite.svg#arrow-left");
       mask-position: center;
       mask-repeat: no-repeat;
@@ -242,6 +239,7 @@ h3 {
     width: 16px;
     height: 16px;
     background-color: var(--color-orange);
+    transition: width 0.5s linear, right 0.5s linear;
   }
 
   &--second {
@@ -262,6 +260,11 @@ h3 {
       mask-image: url("../img/sprite.svg#arrow-long");
       width: 30px;
       height: 10px;
+    }
+
+    &:hover:before {
+      right: 5px;
+      width: 40px;
     }
   }
 }

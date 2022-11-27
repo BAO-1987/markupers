@@ -225,11 +225,11 @@ const blogSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".b
   a11y: {
     prevSlideMessage: 'Next',
     nextSlideMessage: 'Prev'
-  } // navigation: {
-  //   nextEl: ".portfolio__next",
-  //   prevEl: ".portfolio__prev",
-  // },
-  // breakpoints: {
+  },
+  navigation: {
+    nextEl: ".blog-slider__next",
+    prevEl: ".blog-slider__prev"
+  } // breakpoints: {
   //   430: {
   //     slidesPerView: 2,
   //     spaceBetween: 10,

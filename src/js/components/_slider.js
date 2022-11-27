@@ -99,10 +99,10 @@ const blogSlider = new Swiper(".blog-slider", {
     nextSlideMessage: 'Prev',
   },
 
-  // navigation: {
-  //   nextEl: ".portfolio__next",
-  //   prevEl: ".portfolio__prev",
-  // },
+  navigation: {
+    nextEl: ".blog-slider__next",
+    prevEl: ".blog-slider__prev",
+  },
 
 
   // breakpoints: {
