@@ -8,16 +8,16 @@
   }
 
   &__content {
-    // width: 100%;
-    // max-width: 905px;
+    width: 100%;
+    max-width: 1117px;
   }
 
   &__title {
     @include h1;
-    line-height: 1.76;
 
+    line-height: 1.2;
     width: 100%;
-     max-width: 905px;
+    max-width: 905px;
   }
 
   .word {
