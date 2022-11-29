@@ -2,7 +2,7 @@
 @mixin h1 {
   @include adaptive_size("font-size", 150, 75);
 
-  margin-bottom: rem(100);
+  margin-bottom: rem(86);
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0.04em;
