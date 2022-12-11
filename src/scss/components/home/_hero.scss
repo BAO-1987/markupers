@@ -1,8 +1,7 @@
 .hero {
-  background-size: contain;
-  background-position: right;
+  background-size: auto;
+  background-position: 95% 100%;
   background-repeat: no-repeat;
-
   display: flex;
   justify-content: space-between;
 
@@ -17,7 +16,7 @@
 
   &__content {
     width: 100%;
-    max-width: 1140px;
+    max-width: 1135px;
   }
 
   &__title {

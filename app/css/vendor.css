@@ -1,6 +1,4 @@
 html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -11,8 +9,14 @@ html {
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
 }
 
 body {
@@ -34,11 +38,13 @@ small {
   font-size: 80%;
 }
 
-img {
+img,
+picture,
+svg {
   display: block;
   border-style: none;
   height: auto;
-  width: 100%;
+  max-width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -91,66 +97,41 @@ textarea {
   overflow: auto;
 }
 
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-[type=search] {
-  outline-offset: -2px;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
-
-[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  appearance: button;
-  font: inherit;
-}
-
-details {
-  display: block;
-}
-
-summary {
-  display: list-item;
-}
-
-template {
-  display: none;
-}
-
-[hidden] {
-  display: none;
-}
-
 ul,
 ol,
 li {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 p,
 blockquote {
   margin: 0;
-}
-
+} */
 address,
 cite {
   font-style: normal;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-transition-duration: 0.01ms !important;
+    -o-transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    -webkit-animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
 /**
  * Swiper 7.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions

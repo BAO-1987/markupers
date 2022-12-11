@@ -3,7 +3,7 @@
   font-family: var(--font-family);
   font-weight: 500;
   font-feature-settings: "pnum"on, "lnum"on;
-  font-size: 18px;
+  @include adaptive_size("font-size", 18, 14);
   line-height: 1.65;
   letter-spacing: 0.03em;
   color: var(--color-ebony);
@@ -48,7 +48,7 @@ section {
   //   padding-top: rem(30);
   // }
   &--home {
-     padding-top: rem(36);
+    padding-top: rem(36);
   }
 }
 
@@ -81,7 +81,7 @@ h3 {
   align-items: center;
   border: none;
   border-radius: 5px;
-  padding: rem(17) rem(80) rem(17) rem(40);
+  padding: em(17) em(77) em(17) em(40);
   line-height: 1.65;
   max-width: fit-content;
   white-space: nowrap;
@@ -94,7 +94,7 @@ h3 {
   &::before {
     content: "";
     position: absolute;
-    right: 44px;
+    right: rem(40);
     mask-image: url("../img/sprite.svg#cursor");
     mask-position: center;
     mask-repeat: no-repeat;
@@ -144,8 +144,8 @@ h3 {
   @include flex-all-center;
 
   position: absolute;
-  right: 0;
-  top: 57px;
+  right: rem(29);
+  top: rem(117);
 
   &::before {
     content: "";
@@ -165,7 +165,7 @@ h3 {
   }
 
   &--reverse {
-    right: rem(80);
+    right: rem(120);
 
     &::before {
       content: "";
@@ -215,7 +215,7 @@ h3 {
 }
 
 .text {
-  @include adaptive_size("font-size", 18, 14);
+  // @include adaptive_size("font-size", 18, 14);
 
   margin-bottom: rem(50);
   width: 100%;

@@ -75,7 +75,7 @@
   font-weight: 500;
   -webkit-font-feature-settings: "pnum" on, "lnum" on;
   font-feature-settings: "pnum" on, "lnum" on;
-  font-size: 18px;
+  font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
   line-height: 1.65;
   letter-spacing: 0.03em;
   color: var(--color-ebony);
@@ -125,10 +125,11 @@ section {
 }
 
 .title {
-  font-size: calc(45px + 30 * ((100vw - 320px) / 1600));
-  margin-bottom: 3.125rem;
+  font-size: calc(35px + 40 * ((100vw - 320px) / 1600));
+  margin-bottom: 1.125rem;
   font-weight: 700;
   line-height: 1.5;
+  letter-spacing: 0.03em;
 }
 .title::first-letter {
   text-transform: capitalize;
@@ -139,6 +140,7 @@ h3 {
   margin-bottom: 1.25rem;
   font-weight: 900;
   line-height: 1.3;
+  letter-spacing: 0.06em;
 }
 h3::first-letter {
   text-transform: capitalize;
@@ -169,7 +171,7 @@ h3::first-letter {
   align-items: center;
   border: none;
   border-radius: 5px;
-  padding: 1.0625rem 5rem 1.0625rem 2.5rem;
+  padding: 1.0625em 4.8125em 1.0625em 2.5em;
   line-height: 1.65;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -190,7 +192,7 @@ h3::first-letter {
 .btn::before {
   content: "";
   position: absolute;
-  right: 44px;
+  right: 2.5rem;
   -webkit-mask-image: url("../img/sprite.svg#cursor");
   mask-image: url("../img/sprite.svg#cursor");
   -webkit-mask-position: center;
@@ -243,8 +245,8 @@ h3::first-letter {
   -ms-flex-pack: center;
   justify-content: center;
   position: absolute;
-  right: 0;
-  top: 57px;
+  right: 1.8125rem;
+  top: 7.3125rem;
 }
 .slider-btn::before {
   content: "";
@@ -268,7 +270,7 @@ h3::first-letter {
   }
 }
 .slider-btn--reverse {
-  right: 5rem;
+  right: 7.5rem;
 }
 .slider-btn--reverse::before {
   content: "";
@@ -320,7 +322,6 @@ h3::first-letter {
 }
 
 .text {
-  font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
   margin-bottom: 3.125rem;
   width: 100%;
   max-width: 690px;
@@ -646,10 +647,10 @@ h3::first-letter {
   justify-content: center;
 }
 .nav__item:not(:last-child) {
-  margin-right: 3.875rem;
+  margin-right: clamp(20px, 3.875rem, 70px);
 }
 .nav__item:nth-child(5) {
-  margin-right: 2.8125rem;
+  margin-right: clamp(20px, 2.8125rem, 45px);
 }
 .nav__link--dropdown {
   position: relative;
@@ -688,8 +689,8 @@ h3::first-letter {
 }
 
 .hero {
-  background-size: contain;
-  background-position: right;
+  background-size: auto;
+  background-position: 95% 100%;
   background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -700,10 +701,10 @@ h3::first-letter {
 }
 .hero__content {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1135px;
 }
 .hero__title {
-  font-size: calc(75px + 75 * ((100vw - 320px) / 1600));
+  font-size: calc(45px + 105 * ((100vw - 320px) / 1600));
   margin-bottom: 5.375rem;
   font-weight: 900;
   line-height: 1;
@@ -869,7 +870,7 @@ h3::first-letter {
   margin-right: 10px;
 }
 .portfolio-slider__list {
-  margin-bottom: 3.125rem;
+  margin-bottom: clamp(20px, 3.125rem, 50px);
 }
 .portfolio-slider__item {
   display: -webkit-box;
@@ -1135,9 +1136,8 @@ h3::first-letter {
 .services__list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
   margin-bottom: clamp(20px, 3.125rem, 50px);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 33ch), 1fr));
   gap: 1.875rem;
 }
 
@@ -1503,25 +1503,27 @@ h3::first-letter {
 }
 
 .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: relative;
   border: 1px solid var(--color-ebony);
   border-radius: 15px;
-  padding: 1.5625rem 1.875rem 1.5625rem 1.5625rem;
+  padding: 1.375rem 1.4375rem 1.375rem 1.25rem;
   background-color: transparent;
   -webkit-transition: color 0.3s linear, background-color 0.3s linear, border-color 0.3s linear;
   -o-transition: color 0.3s linear, background-color 0.3s linear, border-color 0.3s linear;
   transition: color 0.3s linear, background-color 0.3s linear, border-color 0.3s linear;
 }
-@media (max-width: calc(68.75em - 0.0625em)) {
-  .card {
-    padding: clamp(10px, 1.2rem, 20px);
-  }
-}
 .card::before {
   content: "";
   position: absolute;
-  right: 1.25rem;
-  bottom: 1.25rem;
+  right: 1.5625rem;
+  bottom: 1.625rem;
   -webkit-mask-image: url("../img/sprite.svg#cursor");
   mask-image: url("../img/sprite.svg#cursor");
   -webkit-mask-position: center;
@@ -1530,8 +1532,8 @@ h3::first-letter {
   mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   mask-size: cover;
-  width: 40px;
-  height: 40px;
+  width: 27px;
+  height: 27px;
   background-color: var(--color-ebony);
   -webkit-transition: background-color 0.3s linear;
   -o-transition: background-color 0.3s linear;
@@ -1556,6 +1558,7 @@ h3::first-letter {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  margin-bottom: 15px;
   min-height: 104px;
 }
 .card__icon::before {
@@ -1584,10 +1587,14 @@ h3::first-letter {
 .card__icon--seo::before {
   -webkit-mask-image: url("../img/sprite.svg#triangle");
   mask-image: url("../img/sprite.svg#triangle");
+  width: 60px;
+  height: 45px;
 }
 .card__icon--smm::before {
   -webkit-mask-image: url("../img/sprite.svg#insta");
   mask-image: url("../img/sprite.svg#insta");
+  width: 50px;
+  height: 50px;
 }
 .card__icon--advertising::before {
   -webkit-mask-image: url("../img/sprite.svg#double-arrow");
@@ -1608,7 +1615,7 @@ h3::first-letter {
   padding-left: clamp(25px, 5.6rem, 90px);
 }
 .card p {
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.375rem;
 }
 .card a::before {
   content: "";
@@ -1619,8 +1626,11 @@ h3::first-letter {
 .card span:not([class]) {
   font-size: calc(25px + 15 * ((100vw - 320px) / 1600));
   font-weight: 900;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
 }
 .card__content {
+  margin-top: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1629,7 +1639,7 @@ h3::first-letter {
   align-items: center;
 }
 .card__up {
-  margin-right: clamp(5px, 2rem, 50px);
+  margin-right: clamp(5px, 3rem, 50px);
 }
 
 .contacts {

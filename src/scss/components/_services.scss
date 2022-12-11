@@ -1,8 +1,9 @@
 .services {
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(3, 1fr);
     margin-bottom: clamp(20px, 3.125rem, 50px);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 33ch), 1fr));
     gap: rem(30);
   }
 }

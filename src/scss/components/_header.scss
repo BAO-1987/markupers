@@ -13,11 +13,12 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: rem(62);
+      margin-right: clamp(20px, 3.875rem, 70px);
     }
-     &:nth-child(5) {
-      margin-right: rem(45);
-     }
+
+    &:nth-child(5) {
+      margin-right: clamp(20px, 2.8125rem, 45px);
+    }
   }
 
   &__link {
