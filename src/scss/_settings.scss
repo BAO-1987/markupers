@@ -3,7 +3,10 @@
   font-family: var(--font-family);
   font-weight: 500;
   font-feature-settings: "pnum"on, "lnum"on;
-  @include adaptive_size("font-size", 18, 14);
+  // @include adaptive_size("font-size", 18, 14);
+  //  font-size: clamp(rem(16), 1vw, rem(18));
+  font-size: clamp(0.875rem, calc(0.825rem + 0.25vw), 1.125rem);
+   font-size: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
   line-height: 1.65;
   letter-spacing: 0.03em;
   color: var(--color-ebony);
@@ -53,7 +56,8 @@ section {
 }
 
 .title {
-  @include h2;
+  // @include h2;
+  font-size: clamp(2.1875rem, 1.68rem + 2.1vw, 4.6875rem);
 
   // &--second {
   //   width: 100%;

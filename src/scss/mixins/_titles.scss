@@ -26,7 +26,7 @@
 }
 
 @mixin h3 {
-  @include adaptive_size("font-size", 40, 20);
+  @include adaptive_size("font-size", 40, 18);
 
   margin-bottom: rem(20);
   font-weight: 900;
